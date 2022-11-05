@@ -43,7 +43,7 @@ class RootCommand(Feature):
 
     @Feature.Command(name="jishaku", aliases=["jsk","hacku"],
                      invoke_without_command=True, ignore_extra=False)
-    async def Hacku(self, ctx: ContextA):
+    async def jsk(self, ctx: ContextA):
         """
         The Jishaku debug and diagnostic commands.
         This command on its own gives a status brief.
