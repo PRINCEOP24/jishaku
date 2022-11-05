@@ -3,12 +3,9 @@
 """
 jishaku.features.root_command
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 The jishaku root command.
-
 :copyright: (c) 2021 Devon (Gorialis) R
 :license: MIT, see LICENSE for more details.
-
 """
 
 import sys
@@ -49,7 +46,6 @@ class RootCommand(Feature):
     async def jsk(self, ctx: ContextA):
         """
         The Jishaku debug and diagnostic commands.
-
         This command on its own gives a status brief.
         All other functionality is within its subcommands.
         """
@@ -159,8 +155,10 @@ class RootCommand(Feature):
 
         # Show websocket latency in milliseconds
         summary.append(f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms")
-
-        await ctx.send("\n".join(summary))
+        hacker = discord.Embed(color=0x00FFE4,description="\n".join(summary))
+        hacker.set_author(name=f"{ctx.author}", icon_url=f"{ctx.author.avatar}")
+        hacker.set_thumbnail(url =f"{ctx.author.avatar}")
+        await ctx.send(embed=hacker)
 
     # pylint: disable=no-member
     @Feature.Command(parent="jsk", name="hide")
@@ -214,7 +212,6 @@ class RootCommand(Feature):
     async def jsk_cancel(self, ctx: ContextA, *, index: typing.Union[int, str]):
         """
         Cancels a task with the given index.
-
         If the index passed is -1, will cancel the last task instead.
         """
 
