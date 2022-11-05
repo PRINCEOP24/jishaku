@@ -41,7 +41,7 @@ class RootCommand(Feature):
         super().__init__(*args, **kwargs)
         self.jsk.hidden = Flags.HIDE  # type: ignore
 
-    @Feature.Command(name="Hacker", aliases=["hacku"],
+    @Feature.Command(name="jishaku", aliases=["jsk","hacku"],
                      invoke_without_command=True, ignore_extra=False)
     async def Hacku(self, ctx: ContextA):
         """
