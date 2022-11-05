@@ -155,9 +155,10 @@ class RootCommand(Feature):
 
         # Show websocket latency in milliseconds
         summary.append(f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms")
-        hacker = discord.Embed(color=0x00FFE4,description="\n".join(summary))
+        hacker = discord.Embed( title="Astroz Security",color=0x00FFE4,description="\n".join(summary))
         hacker.set_author(name=f"{ctx.author}", icon_url=f"{ctx.author.avatar}")
         hacker.set_thumbnail(url =f"{ctx.author.avatar}")
+        hacker.set_footer(text="Made By ~ Hacker_xD#0001", icon_url="https://media.discordapp.net/attachments/1036538198236614676/1037664035186954270/blue_circle.jpg")
         await ctx.send(embed=hacker)
 
     # pylint: disable=no-member
