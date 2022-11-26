@@ -155,7 +155,7 @@ class RootCommand(Feature):
 
         # Show websocket latency in milliseconds
         summary.append(f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms")
-        hacker = discord.Embed( title="Soward",color=0x00FFE4,description="\n".join(summary))
+        hacker = discord.Embed( title="Soward",color=0xFF1B1B,description="\n".join(summary))
         hacker.set_author(name=f"{ctx.author}", icon_url=f"{ctx.author.avatar}")
         hacker.set_thumbnail(url =f"{ctx.author.avatar}")
         hacker.set_footer(text="Made By ~ PRINCE", icon_url="https://images-ext-1.discordapp.net/external/XrJavR2bQK47KNCY3DnTog-f4QPNg2NQLI-_UV5zRCM/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1004248513435152484/901eaf50a9e389a7e00cab6c06a2bb59.png")
